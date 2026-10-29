@@ -1,0 +1,8 @@
+{
+  "name": " Sanny's Kitchen",
+  "description": "Artisanal espresso, gourmet dining, online ordering, table reservations, and comprehensive owner management dashboard with modern glassmorphic aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-espresso-950: #0d0704;
+    --color-espresso-900: #150d09;
+    --color-espresso-850: #1c120c;
+    --color-espresso-800: #261811;
+    --color-espresso-700: #3b251a;
+    --color-espresso-600: #523525;
+    
+    --color-cream-50: #fdfbf7;
+    --color-cream-100: #f7f1e7;
+    --color-cream-200: #ede2d3;
+    --color-cream-300: #decbba;
+    
+    --color-gold-300: #f1d394;
+    --color-gold-400: #e2b767;
+    --color-gold-500: #b87b42;
+    --color-gold-600: #9e6431;
+    --color-gold-700: #7e4d20;
+
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-espresso-950);
+    color: var(--color-cream-50);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(28, 18, 12, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 183, 103, 0.16);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+}
+
+.glass-panel-warm {
+  background: rgba(38, 24, 17, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 183, 103, 0.22);
+  box-shadow: 0 24px 48px -12px rgba(13, 7, 4, 0.85);
+}
+
+.glass-card {
+  background: rgba(28, 18, 12, 0.62);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(247, 241, 231, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(38, 24, 17, 0.78);
+  border-color: rgba(226, 183, 103, 0.35);
+  box-shadow: 0 16px 36px -10px rgba(184, 123, 66, 0.2);
+  transform: translateY(-2px);
+}
+
+.glass-input {
+  background: rgba(18, 10, 6, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 183, 103, 0.2);
+  color: #fdfbf7;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #e2b767;
+  box-shadow: 0 0 0 2px rgba(226, 183, 103, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #150d09;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b251a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b87b42;
+}
